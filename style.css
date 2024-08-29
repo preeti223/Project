@@ -1,0 +1,329 @@
+:root {
+    --color-primary: #72b626;
+    --color-secondary: #ffffff;
+    --font-main:"Poppins", sans-serif;
+ 
+    --font-secondary:"Open Sans", sans-serif; ;
+    --text-color-main:rgb(115, 112, 112) ;
+    --text-color-dim: rgb(115, 112, 112);
+}
+
+/* Default hidden on all screen sizes */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 , h5, h6 {
+
+    font-family: var(--font-main);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p, li, ul {
+    font-family :var(--font-secondary);
+}
+/*Adding paragraph */
+
+
+/* Display block on large screens and above */
+
+    .hidden{
+        display: block;
+        position: relative;
+        width: 60%;
+        height: 90%;
+        left: 40px; 
+        top: 40px; 
+        border-radius: 30px; 
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+        object-fit: cover; 
+    }
+
+
+/* For NAV BAR */
+
+
+ul{
+    display: flex;
+    justify-content: right;
+    gap:20px;
+    
+}
+
+ul li{
+    display: flex;
+    list-style: none;
+    
+    padding: 10px 20px;
+    position: relative;
+}
+
+ ul li a {
+    color: black;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 5px 5px;
+    font-size: 20px;
+
+    transition: all 0.3s;
+}
+ ul li a:hover {
+    color: var(--color-primary);
+}
+
+/* For Paragraph */
+
+.whole{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 70px; 
+
+}
+.paragraph  {
+    width: 550px;            
+    border-color:var(--color-secondary)
+   
+       
+}
+
+.first-color{
+  
+    color: var(--color-primary);
+    font-size: 51px;
+    line-height: 62px;
+}
+.next-color{
+  
+    color: var(--text-color-main);
+    font-size: 51px;
+    line-height: 62px;
+
+}
+
+.paragraph p{
+   
+    line-height: 35px;
+}
+
+/* For BUTTON */
+.button {
+    display: inline-flex;
+    align-items: center;
+    padding: 13px 45px;
+    border: 1px solid var(--color-primary);
+    border-radius: 30px;
+    text-decoration: none;
+    color: var(--text-color-main);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.button .text {
+        margin-right: 20px;
+        font-size: 15px;
+        font-family: var(--font-main);
+    
+}
+
+.button .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 57px;
+        height: 57px;
+        background-color:var(--color-primary);
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .button .circle {
+        
+        color: white;
+        font-size: 20px;
+      
+        font-weight: bold;
+    }
+       
+    .button:hover{
+        background-color: var(--color-primary);
+        transition: 0.3s all ease;
+      
+
+    }
+
+
+
+.nav-content1 {
+    position: relative;
+   
+    background: rgb(114,182,38);
+    background: linear-gradient(81deg, rgba(114,182,38,1) 30%, rgba(255,255,255,1) 30%); 
+
+}
+
+.container {
+    margin: 0 30px;
+    
+}
+
+/* FOR .paragraph2 */
+
+
+
+
+.Aboutme-section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.section-title{
+    width: 100%;
+    height:40%;
+
+    position: relative;
+    text-align: center;
+} 
+
+.foreground-title {
+ position: relative; 
+ text-align: center;
+
+
+  
+}
+
+.background-title {
+   
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 110px;
+    color: var(--text-color-dim);
+    opacity: 0.3;
+
+}
+
+.background-title h1{
+margin: 0;
+font-size: 110px;
+
+}
+ /* whole div for Personal Info */
+ .Description{
+    width: 80%;
+    margin: auto;
+    height: auto;
+
+} 
+.personal{
+    display: flex;
+    gap: 50px;
+    width: 50%;
+}
+/* Table part */
+.personal-color{
+    color:var(--text-color-main);
+    
+}
+.text-color{
+    color:var(--text-color-dim);
+}
+
+strong{
+    color:var(--text-color-main); 
+}
+.personal-info {
+    display: flex;
+    flex-direction: row;
+    line-height: 2.0;
+   
+    margin-bottom: 40px;
+}
+
+.info-left, .info-right {
+    width: 50%;
+    text-align: left;
+}
+
+.personal-info p {
+   
+    font-size: 15px;
+}
+
+/* Box Part */
+
+.stats {
+     display: flex;
+     padding: 1px 68px;
+    
+}
+
+.stat {
+    
+    background-color:var(--color-secondary);
+    padding: 16px 68px;
+    margin-bottom: 20px;
+    width: 31%; 
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.stat h1 {
+    color: var(--color-primary);
+    
+    
+}
+
+.stat p {
+    
+    color: var(--text-color-main);
+}
+
+.stat-second{
+    gap: 30px;
+}
+
+/* Skill Section */
+
+.skill-color{
+    color: var(--text-color-main);
+    padding-bottom: 48px;
+}
+.skills-section{
+    text-align: center;
+}
+
+.skills-container{
+   width: 50%;
+   margin-left:400px;
+   margin-top:80px;
+}
+
+
+.skill-circle{
+    width:120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 9px solid var(--text-color-main);
+}
+.circle-first{
+    display: flex;
+    
+    justify-content: space-around;  
+    margin-bottom: 60px;
+}
+.circle-second{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+}
