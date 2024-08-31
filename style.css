@@ -367,7 +367,18 @@ padding-top: 35px;
 
 .education-section{
     text-align: center;
+   
+}
+.resume{
+    display:flex;
+    justify-content: center;
+    margin-top: 40px;
     
+}
+
+.education-first{
+  width: 40%;
+  
 }
 
 .education-item{
@@ -386,7 +397,7 @@ border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
-margin-right: -21px;
+ margin-right: -21px; 
 }
 
 .icon{
@@ -395,21 +406,12 @@ margin-right: -21px;
     color: #ffffff;
 }
 
-.education-content{
+ .education-content{
     /* position: relative; */
     padding-left: 20px;
     border-left: 2px solid #ddd;
-}
+} 
 
-/* .education-content::before{
-    content: '';
-    position: absolute;
-    left: -11px;
-    top: 10px;
-    width: 2px;
-    height: 100%;
-    background-color: #ddd;
-} */
 
 .education-date{
     background-color: #ddd;
@@ -425,24 +427,193 @@ margin-right: -21px;
     font-size: 18px;
     margin: 0;
     color: var(--text-color-main);
-    margin-left: 32px;
+   
 }
 .education-title span{
     font-weight: normal;
     color: var(--text-color-dim);
-    margin-left: 10px;
+    
 }
 
 .education-content p{
     font-size: 14px;
     color: #666;
-    margin: 10px 0 0 0;
+  
 
 }
 
 .education-next{
+    width: 40%;
+}
+
+
+
+/* Work OF My POrtfolio */
+
+.first-box{
+    display: flex;
+    justify-content: center;
+}
+.second-box{
+    display: flex;
+    justify-content: center;
+}
+
+.third-box{
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    width:350px;
+    height: 215px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius : 10px;
+    box-shadow: 0 4px 8px var(--text-color-dim);
+    position: relative; 
+    overflow : hidden;
+    transition: background-color 0.3s ease, 
+                background-image 0.3s ease;  
+
+}
+
+#box1{
+    background-image:url('paper.jpg'); 
+}
+
+#box2{
+    background-image: url('cat.jpg');
+}
+
+#box3{
+    background-image: url('construction.jpg');
+}
+
+#box4{
+    background-image: url('bakery.jpg');
+}
+#box5{
+    background-image: url('butterfly.jpg');
+}
+
+#box6{
+    background-image: url('flower.jpg');
+}
+
+#box7{
+    background-image: url('boat.jpg');
+}
+
+#box8{
+    background-image: url('bb.jpg');
+}
+
+#box9{
+    background-image: url('pencil.jpg');
+}
+.box-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent; 
+    font-size: 20px;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+
+.box-text:hover{
+    color: var(--color-secondary);
+    transition: color 0.3s ease;
+
+}
+
+.box:hover{
+background-color: var(--color-primary);
+background-image: none;
+cursor: pointer;
+}
+
+/* Contact Section */
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-info {
+    max-width: 45%;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #68b847;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.contact-item .icon  {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-item .text h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--color-primary);
+}
+
+.contact-item .text p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-color-dim);
+}
+
+/* .social-links a {
+    margin-right: 10px;
+} */
+
+.social-links  {
     display:flex;
-    justify-content: center ;
-    margin-top: -471px;
-    margin-left: 263px;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-links:hover {
+    transform: scale(1.1);
 }
