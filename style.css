@@ -5,13 +5,14 @@
  
     --font-secondary:"Open Sans", sans-serif; ;
     --text-color-main:rgb(115, 112, 112) ;
-    --text-color-dim: rgb(115, 112, 112);
+    --text-color-dim: rgba(115, 112, 112, 0.49);
 }
 
 /* Default hidden on all screen sizes */
 body{
     margin: 0;
     padding: 0;
+    font-family: var(--font-secondary);
 }
 
 h1, h2, h3, h4 , h5, h6 {
@@ -19,6 +20,7 @@ h1, h2, h3, h4 , h5, h6 {
     font-family: var(--font-main);
     font-weight: 700;
     line-height: 1.2;
+    
 }
 
 p, li, ul {
@@ -32,7 +34,7 @@ p, li, ul {
     .hidden{
         display: block;
         position: relative;
-        width: 60%;
+        width: 95%;
         height: 90%;
         left: 40px; 
         top: 40px; 
@@ -43,16 +45,23 @@ p, li, ul {
 
 
 /* For NAV BAR */
+.nav-contain{
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 999;  
+} 
 
 
-ul{
+.home-part ul{
     display: flex;
     justify-content: right;
     gap:20px;
     
 }
 
-ul li{
+.home-part ul li{
     display: flex;
     list-style: none;
     
@@ -60,7 +69,7 @@ ul li{
     position: relative;
 }
 
- ul li a {
+.home-part ul li a {
     color: black;
     justify-content: space-between;
     text-decoration: none;
@@ -69,7 +78,7 @@ ul li{
 
     transition: all 0.3s;
 }
- ul li a:hover {
+.home-part ul li a:hover {
     color: var(--color-primary);
 }
 
@@ -78,6 +87,7 @@ ul li{
 .whole{
     display:flex;
     justify-content: space-around;
+    align-items:center;
     margin-top: 70px; 
 
 }
@@ -156,7 +166,7 @@ ul li{
     .button:hover{
         background-color: var(--color-primary);
         transition: 0.3s all ease;
-      
+        color: var(--color-secondary);
 
     }
 
@@ -164,7 +174,7 @@ ul li{
 
 .nav-content1 {
     position: relative;
-   
+    height: 90vh;
     background: rgb(114,182,38);
     background: linear-gradient(81deg, rgba(114,182,38,1) 30%, rgba(255,255,255,1) 30%); 
 
@@ -270,11 +280,16 @@ strong{
 .stat {
     
     background-color:var(--color-secondary);
-    padding: 16px 68px;
-    margin-bottom: 20px;
-    width: 31%; 
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.progress{
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 40px;
+    padding-bottom: 25px;
 }
 
 .stat h1 {
@@ -287,6 +302,7 @@ strong{
 
 .stat-second{
     gap: 30px;
+    margin-left: 20px;
 }
 
 
@@ -347,8 +363,95 @@ display: flex;
 justify-content: center; 
 gap: 111px;
 padding-top: 35px;
+} 
+
+.my-skills{
+    width: 25%;
+    margin-bottom: 48px;
+    display: block;
+
+}
+.float{
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    position: relative;
+    font-size: 120px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    float: left;
+    margin: 0 .1em .1em 0;
+    background-color: #ccc;
+   
+    --tw-bg-opacity: 1;
+    background-color: rgb(238 238 238 / var(--tw-bg-opacity));
 }
 
+
+.float > span {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 5em;
+    line-height: 5em;
+    font-size: 0.2em;
+    color: #0c0c0c;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+}
+    
+.float .slice{
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    clip: rect(0, 1em, 1em, .5em);
+}
+.float *{
+    box-sizing: content-box;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+.float.p25 .bar{
+    transform: rotate(90deg);
+    position: absolute;
+    border: .08em solid #307bbb;
+    width: .84em;
+    height: .84em;
+    clip: rect(0, .5em, 1em, 0);
+    border-radius: 50%;
+    transform: rotate(0deg);
+}
+
+.fill{
+    box-sizing: content-box;
+    border: 0 solid #e5e7eb;
+    
+
+}
+
+.float:after {
+    position: absolute;
+    top: 0.08em;
+    left: 0.08em;
+    display: block;
+    content: " ";
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    width: 0.84em;
+    height: 0.84em;
+    transition-property: all;
+    transition-timing-function: ease-in;
+}
 .second-row{
     display: flex;
     justify-content: center;
@@ -360,19 +463,18 @@ padding-top: 35px;
 /*Education and Experience Section*/
 
 .education-section{
+    width: 100%;
     text-align: center;
    
 }
 .resume{
     display:flex;
-    justify-content: center;
-    margin-top: 40px;
-    
+    align-items: center;
+    width: 100%;
 }
 
 .education-first{
-  width: 40%;
-  
+  width: 50%;
 }
 
 .education-item{
@@ -436,26 +538,18 @@ justify-content: center;
 }
 
 .education-next{
-    width: 40%;
+    width: 48%;
+  
 }
 
 
 
 /* Work OF My POrtfolio */
 
-.first-box{
-    display: flex;
-    justify-content: center;
-}
-.second-box{
-    display: flex;
-    justify-content: center;
+.work-box{
+    margin : 0 6%;
 }
 
-.third-box{
-    display: flex;
-    justify-content: center;
-}
 
 .box{
     width:350px;
@@ -474,40 +568,44 @@ justify-content: center;
                 background-image 0.3s ease;  
 
 }
+.box-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 #box1{
-    background-image:url('paper.jpg'); 
+    background-image:url('images/paper.jpg'); 
 }
 
 #box2{
-    background-image: url('cat.jpg');
+    background-image: url('images/cat.jpg');
 }
 
 #box3{
-    background-image: url('construction.jpg');
+    background-image: url('images/construction.jpg');
 }
 
 #box4{
-    background-image: url('bakery.jpg');
+    background-image: url('images/bakery.jpg');
 }
 #box5{
-    background-image: url('butterfly.jpg');
+    background-image: url('images/butterfly.jpg');
 }
 
 #box6{
-    background-image: url('flower.jpg');
+    background-image: url('images/flower.jpg');
 }
 
 #box7{
-    background-image: url('boat.jpg');
+    background-image: url('images/boat.jpg');
 }
 
 #box8{
-    background-image: url('bb.jpg');
+    background-image: url('images/bb.jpg');
 }
 
 #box9{
-    background-image: url('pencil.jpg');
+    background-image: url('images/pencil.jpg');
 }
 .box-text{
     position: absolute;
@@ -518,9 +616,10 @@ justify-content: center;
     font-size: 20px;
     text-align: center;
     transition: color 0.3s ease;
+    z-index: 1;
   }
 
-.box-text:hover{
+.box:hover .box-text{
     color: var(--color-secondary);
     transition: color 0.3s ease;
 
@@ -531,6 +630,24 @@ background-color: var(--color-primary);
 background-image: none;
 cursor: pointer;
 }
+
+.absolute-overlay{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color: var(--color-primary);
+    top:0;
+    left: 0;
+    display: none;
+    z-index: 0;
+
+}
+ .box:hover .absolute-overlay {
+    display: block;
+
+
+
+ }
 
 /* Contact Section */
 
@@ -563,7 +680,7 @@ cursor: pointer;
 .contact-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .contact-item .icon {
@@ -583,7 +700,7 @@ cursor: pointer;
 .contact-item .text h3 {
     margin: 0;
     font-size: 18px;
-    color: var(--color-primary);
+    color: var(--text-color-main);
 }
 
 .contact-item .text p {
@@ -603,8 +720,8 @@ cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         background-color:  #eaeaea;
         border-radius: 50%;
         text-decoration: none;
@@ -652,7 +769,7 @@ cursor: pointer;
 textarea {
     width: 100%;
     height: 150px;
-    padding: 10px;
+    padding: 16px;
     border: 1px solid #ddd;
     border-radius: 20px;
     font-size: 17px;
