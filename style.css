@@ -33,14 +33,23 @@ p, li, ul {
 
     .hidden{
         display: block;
-        position: relative;
-        width: 95%;
-        height: 90%;
+        position: absolute;
+        width: 34%;
+        height: auto;
         left: 40px; 
-        top: 40px; 
+        top: 120px; 
         border-radius: 30px; 
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
         object-fit: cover; 
+    }
+
+    .nav-content1{
+        position: relative;
+        height: 90vh;
+        width: 50%;
+        /* z-index: 1; */
+        background: rgb(114,182,38);
+        background: linear-gradient(81deg, rgba(114,182,38,1) 30%, rgba(255,255,255,1) 30%); 
     }
 
 
@@ -50,9 +59,9 @@ p, li, ul {
     width: 100%;
     position: fixed;
     background-color: #ffffff;
+    border: 1px solid black;
     z-index: 999;  
-} 
-
+}  
 
 .home-part ul{
     display: flex;
@@ -86,9 +95,9 @@ p, li, ul {
 
 .whole{
     display:flex;
-    justify-content: space-around;
+ 
     align-items:center;
-    margin-top: 70px; 
+    margin-top: 100px; 
 
 }
 .paragraph  {
@@ -171,19 +180,8 @@ p, li, ul {
     }
 
 
-
-.nav-content1 {
-    position: relative;
-    height: 90vh;
-    background: rgb(114,182,38);
-    background: linear-gradient(81deg, rgba(114,182,38,1) 30%, rgba(255,255,255,1) 30%); 
-
-}
-
-.container {
-    margin: 0 30px;
     
-}
+
 
 /* FOR .paragraph2 */
 
@@ -314,56 +312,9 @@ strong{
 }
 .skills-section{
     text-align: center;
-}
-
-.cir-container {
-    text-align: center;
-}
-.cir {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: bold;
-    border: 10px solid #ffffff;
-    position: relative;
-}
-
-.cir span {
-    position: absolute;
-    font-size: 19px;
-    color: var(--text-color-main);
-}
-
-.cir-container p {                  
-    margin-top: 10px;
-    font-size: 16px;
-    color: var(--text-color-main);
-}
-
-.cle{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: bold;
-    border: 4px solid #72b626;
-    position: absolute;
+    width: 100%;
 
 }
-
-.first-row{
-display: flex;
-justify-content: center; 
-gap: 111px;
-padding-top: 35px;
-} 
 
 .my-skills{
     width: 25%;
@@ -422,21 +373,36 @@ padding-top: 35px;
 }
 
 .float.p25 .bar{
-    transform: rotate(90deg);
+    /* transform: rotate(90deg);  */
     position: absolute;
-    border: .08em solid #307bbb;
+    border: 0.08em solid #72b626;
     width: .84em;
     height: .84em;
     clip: rect(0, .5em, 1em, 0);
     border-radius: 50%;
-    transform: rotate(0deg);
+    
+}
+
+
+#oval1{
+    transform: rotate(90deg); 
+}
+
+#oval2{
+    transform: rotate(51deg);
+}
+
+#oval3{
+    transform: rotate(252deg);
+}
+
+#oval4{
+    transform: rotate(237.6deg);
 }
 
 .fill{
     box-sizing: content-box;
     border: 0 solid #e5e7eb;
-    
-
 }
 
 .float:after {
@@ -452,13 +418,24 @@ padding-top: 35px;
     transition-property: all;
     transition-timing-function: ease-in;
 }
-.second-row{
-    display: flex;
-    justify-content: center;
-    gap: 111px; 
-    padding: 35px 0;
-   
+.name{
+    font-size: 24px;
+    width: 11%;
+    font-family: Open Sans, sans-serif;
+    color: var(--text-color-main);
+    
+}
+
+.first-oval{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.second-oval{
+    display:flex;
+    flex-wrap: wrap;
 } 
+
 
 /*Education and Experience Section*/
 
